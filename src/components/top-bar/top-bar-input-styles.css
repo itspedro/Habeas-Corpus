@@ -1,0 +1,27 @@
+.top-bar-input_container {
+  position: relative;
+  width: 300px;
+}
+
+.top-bar-input_container svg {
+  position: absolute;
+  width: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  
+}
+
+.top-bar-input_container__primary {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+
+  background-color: #d4d4d4;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size:14px;
+  color: #000;
+}
