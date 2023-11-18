@@ -1,0 +1,31 @@
+.nav-bar-item_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.nav-bar-item_container__icon {
+  width: 25px;
+  margin: 0 20px;
+}
+
+.nav-bar-item_container__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 18px;
+  width: 100%;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text-color);
+
+}
+
+.nav-bar-item_container__link:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
