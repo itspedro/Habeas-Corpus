@@ -1,5 +1,6 @@
 import TopBar from '@/components/top-bar/top-bar';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
+import Results from './Results';
 
 
 function Students() {
@@ -9,10 +10,11 @@ function Students() {
   return (
     <div>
       <div className="container">
-        <TopBar />
-        <div className="row">
-          <div className="col-12">
+        <div>
+          <div>
             <h1>Alunos</h1>
+            <TopBar />
+            <Results />
           </div>
         </div>
       </div>
