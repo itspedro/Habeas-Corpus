@@ -1,8 +1,11 @@
 import { createContext, useState } from 'react';
+import { FilterType } from '@/types/FilterType';
 
 export const FilterContext = createContext({
   search: '',
-  setSearch: (value: string) => {}
+  type: FilterType.ALL,
+  setSearch: (value: string) => {},
+  setType: (value: FilterType) => {}
 });
 
 interface ProviderProps {
@@ -12,12 +15,15 @@ interface ProviderProps {
 export function FilterContextProvider({ children }: ProviderProps) {
 
   const [search, setSearch] = useState('');
+  const [type, setType] = useState(FilterType.ALL);
 
   return (
     <FilterContext.Provider
       value={{
         search,
-        setSearch
+        type,
+        setSearch,
+        setType
       }}
     >
       {children}
