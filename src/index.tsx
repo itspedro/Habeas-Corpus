@@ -6,6 +6,7 @@ import { FilterContextProvider } from '@/contexts/filter-context';
 import App from './App';
 import Home from '@/content/Home/Home';
 import Students from '@/content/Students/Students';
+import Teachers from './content/Teachers/Teachers';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/alunos',
         element: <Students />
+      },
+      {
+        path: '/instrutores',
+        element: <Teachers />
       },
     ]
   },
