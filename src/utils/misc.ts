@@ -1,5 +1,5 @@
 import { Aluno } from '@/types/Aluno';
-import data from './data.json';
+import data from './MOCK_DATA.json';
 
 export function getAllMembros(): Aluno[] {
   return data;
