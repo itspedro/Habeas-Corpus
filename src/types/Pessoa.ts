@@ -6,6 +6,6 @@ export type Pessoa = {
   cep: string,
   telefone: string,
   email: string,
-  dataNascimento: string,
+  data_nascimento: string,
   sexo: string,
 }

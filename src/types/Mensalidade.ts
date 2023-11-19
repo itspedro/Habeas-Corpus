@@ -1,6 +1,6 @@
 export type Mensalidade = {
-  codMensalidade: string,
-  dataVencimento: string,
+  cod_mensalidade: string,
+  data_vencimento: string,
   valor: string,
   acrescimo?: string,
   dataPgto?: string,

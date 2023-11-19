@@ -1,6 +1,12 @@
 import { Aluno } from '@/types/Aluno';
-import data from './MOCK_DATA.json';
+import { Professor } from '@/types/Professor';
+import dataAlunos from './data/alunos.json';
+import dataProfessores from './data/professores.json';
 
-export function getAllMembros(): Aluno[] {
-  return data;
+export function getAllStudents(): Aluno[] {
+  return dataAlunos;
+}
+
+export function getAllTeachers(): Professor[] {
+  return dataProfessores;
 }

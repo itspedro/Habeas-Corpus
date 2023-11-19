@@ -1,6 +1,6 @@
 export type Matricula = {
-  codMatricula: string,
+  cod_matricula: string,
   data: string,
-  dataCancelamento?: string,
-  motivoCancelamento?: string, 
+  data_cancelamento?: string,
+  motivo_cancelamento?: string, 
 }
