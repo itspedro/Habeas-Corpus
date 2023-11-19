@@ -7,7 +7,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   handleChange: (value: string) => void;
 }
 
-function TopBarInputWicon(props: InputProps) {
+function TopBarInputIcon(props: InputProps) {
   return (
     <div className="top-bar-input_container">
       <input 
@@ -26,4 +26,4 @@ function TopBarInputWicon(props: InputProps) {
   )
 }
 
-export default TopBarInputWicon;
+export default TopBarInputIcon;

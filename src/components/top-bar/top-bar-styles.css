@@ -1,4 +1,9 @@
-.top-bar_controls__settings {
-  border: none;
+.top-bar_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
+  width: 70%;
+  margin: 0 auto;
+  gap: 20px;
 }
