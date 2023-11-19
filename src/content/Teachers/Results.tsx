@@ -1,24 +1,26 @@
-import { getAllStudents } from '@/utils/misc';
 import ResultsTable from '@/components/results-table/results-table';
+import { getAllTeachers } from '@/utils/misc';
+
+
 
 function Results() {
 
   return (
     <ResultsTable
-      getArray={getAllStudents}
+      getArray={getAllTeachers}
       tableHeadings={[
         {
-          label: 'Matricula',
-          key: 'cod_matricula'
+          label: 'cref',
+          key: 'cref'
         },
         {
           label: 'Nome',
           key: 'nome'
-        },  
+        },
         {
           label: 'Email',
           key: 'email'
-        }, 
+        },
         {
           label: 'Sexo',
           key: 'sexo'
@@ -26,10 +28,10 @@ function Results() {
         {
           label: 'Status',
           key: 'status'
-        },  
+        }
       ]}
     />
   )
 }
 
-export default Results;
+export default Results
