@@ -12,7 +12,7 @@ const students: Aluno[] = getAllMembros();
 function Results() {
 
   const { search, type } = useFilter();
-  const studentsFilter = students.filter((item) => {
+  const filteredStudents: Aluno[] = students.filter((item) => {
     switch (type) {
       case FilterType.INACTIVE:
         return item.dataCancelamento != null;
@@ -28,9 +28,9 @@ function Results() {
   const maxPerPage = 10;
   const lastIndex = curPage * maxPerPage;
   const firstIndex = lastIndex - maxPerPage;
-  const currentStudents = studentsFilter.slice(firstIndex, lastIndex);
-  const totalPages = Math.ceil(studentsFilter.length / maxPerPage);
-  const studentSearchs = studentsFilter.filter((item) => item.nome.toLowerCase().includes(search.toLowerCase()));
+  const currentStudents = filteredStudents.slice(firstIndex, lastIndex);
+  const totalPages = Math.ceil(filteredStudents.length / maxPerPage);
+  const studentSearchs = filteredStudents.filter((item) => item.nome.toLowerCase().includes(search.toLowerCase()));
 
 
   return (
