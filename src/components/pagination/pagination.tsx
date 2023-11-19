@@ -15,6 +15,10 @@ function Pagination(
   }: PaginationProps
 ) {
 
+  if (curPage > totalPages) {
+    setCurPage(1);
+  }
+
   return (
     <nav className="pagination_container">
     <ul className="pagination_container__list">
