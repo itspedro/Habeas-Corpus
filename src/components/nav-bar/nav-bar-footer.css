@@ -1,4 +1,25 @@
 .nav-bar-footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   background-color: var(--accent-color);
+  margin-top: auto;
+  color: var(--text-color);
+}
+
+.nav-bar-footer_container__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-bar-footer_container__link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  color: var(--text-color);
 }

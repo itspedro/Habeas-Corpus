@@ -25,6 +25,7 @@ export function useSecretCode(secretCode: string[]): boolean {
         return
     }
     setSuccess(true);
+    setCurrent(0);
     
   }, [key])
 

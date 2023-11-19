@@ -10,10 +10,6 @@
   left: 0;
 }
 
-.nav-bar_container:nth-last-child(2) {
-  margin-bottom: auto;
-}
-
 .nav-bar_container__logo {
   display: flex;
   align-items: center;
@@ -36,7 +32,7 @@
   background-color: var(--accent-color);
 }
 
-.nav-bar_container__logo img {
+.img {
   width: 100px;
 }
 
@@ -45,4 +41,11 @@
   padding: 0;
   margin: 0;
   padding: 10px;
+}
+
+
+.secret {
+  width: 100px;
+  transform: rotate(360deg);
+  transition: transform 1s ease;
 }

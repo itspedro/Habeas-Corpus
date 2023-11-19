@@ -10,14 +10,22 @@ import {
 import NavBarItem from "./nav-bar-item";
 import logo from '@/assets/app/HC-logo.png';
 import NavBarFooter from './nav-bar-footer';
+import { useKonamiCode } from '@/hooks/useKonamiCode';
+
 
 function NavBar() {
+  
+  const secret = useKonamiCode();
+  const name = secret ? 'secret' : 'img';
+
+
   return (
     <nav className="nav-bar_container">
       <div className="nav-bar_container__logo">
         <img 
           src={logo}
           alt="Logo - Habeas Corpus"
+          className={name}
         />
       </div>
       <ul className="nav-bar_container__list">
@@ -65,6 +73,7 @@ function NavBar() {
         </li>
       </ul>
       <NavBarFooter />
+
     </nav>
   );
 }
