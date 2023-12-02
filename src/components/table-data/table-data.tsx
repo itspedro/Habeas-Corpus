@@ -1,33 +1,28 @@
 import React from 'react';
 
-interface TableDataProps<T extends {
-  status: boolean;
-}> {
+interface TableDataProps<T> {
   data: T;
   tableHeadings: Array<string>;
+  status?: boolean;
 }
 
-function renderTableCell<T extends Record<string, any>>(data: T, key: keyof T): React.ReactNode {
-  const value = data[key];
-  return value;
-}
 
-function TableData<T extends {
-  status: boolean
-}>(
-  { data, tableHeadings }: TableDataProps<T>
+function TableData<T>(
+  { data, tableHeadings, status }: TableDataProps<T>
 ) {
 
   return (
     <tr className="table-data_container">
-      {tableHeadings.filter((item) => item.toLowerCase() !== 'status').map((item, index) => (
+      {tableHeadings.filter((item) => item !== 'status').map((item, index) => (
           <td key={index}>
-            {renderTableCell(data, item.toLowerCase() as keyof T)}
+            {data[item as keyof T] as React.ReactNode}
           </td>
       ))}
-      <td className="table-data_container__status">
-        {data.status ? 'Ativo' : 'Inativo'}
-      </td>
+      {status !== (null || undefined) && (
+        <td className="table-data_container__status">
+          {status ? 'Ativo' : 'Inativo'}
+        </td>
+      )}
     </tr>
   )
 }

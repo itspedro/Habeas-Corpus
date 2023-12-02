@@ -7,6 +7,7 @@ import App from './App';
 import Home from '@/content/Home/Home';
 import Students from '@/content/Students/Students';
 import Teachers from './content/Teachers/Teachers';
+import Activities from './content/Activities/Activities';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/instrutores',
         element: <Teachers />
+      },
+      {
+        path: '/atividades',
+        element: <Activities />
       },
     ]
   },

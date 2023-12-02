@@ -10,29 +10,29 @@ type HeadingsType = {
   key: string
 }
 
-interface ResultsTableProps<T extends { 
-  status: boolean
-  nome: string
-} > {
+interface ResultsTableProps<T> {
   getArray: () => Array<T>;
   tableHeadings: Array<HeadingsType>;
 }
 
-function ResultsTable<T extends { 
-  status: boolean
-  nome: string
-} >({ 
-  getArray, tableHeadings 
+function ResultsTable<T>({ 
+  getArray, tableHeadings
 }: ResultsTableProps<T>) {
+
+  const keys = tableHeadings.map((item) => item.key);
+  const filterKeys = keys.filter((item) => item.toLowerCase() === 'status');
+  const statusIndex = filterKeys.findIndex((item) => item.toLowerCase() === 'status');
+  const nameKey = tableHeadings.filter(item => item.label === 'Nome');
   
   const data: Array<T> = getArray();
+
   const { search, type } = useFilter();
   const filteredData: Array<T> = data.filter((item) => {
     switch (type) {
       case FilterType.INACTIVE:
-        return !item.status;
+        return !(item[filterKeys[statusIndex] as keyof T] as boolean);
       case FilterType.ACTIVE: 
-        return item.status;
+        return (item[filterKeys[statusIndex] as keyof T] as boolean);
       case FilterType.ALL:
         return true;
       default:
@@ -46,8 +46,9 @@ function ResultsTable<T extends {
   const firstIndex = lastIndex - maxPerPage;
   const currentData = filteredData.slice(firstIndex, lastIndex);
   const totalPages = Math.ceil(filteredData.length / maxPerPage);
-  const searchedData = filteredData.filter((item) => item.nome.toLowerCase().includes(search.toLowerCase()));
-
+  const searchedData = filteredData.filter((item) => 
+    item[nameKey[0].key as keyof T]?.toString().toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="results_container">
@@ -69,12 +70,14 @@ function ResultsTable<T extends {
                 key={index}
                 data={item}
                 tableHeadings={tableHeadings.map((heading) => heading.key)}
+                status={item[filterKeys[statusIndex] as keyof T] as boolean}
               />
             )) : currentData.map((item, index) => (
               <TableData
                 key={index}
                 data={item}
                 tableHeadings={tableHeadings.map((heading) => heading.key)}
+                status={item[filterKeys[statusIndex] as keyof T] as boolean}
               />
           ))}
         </tbody>

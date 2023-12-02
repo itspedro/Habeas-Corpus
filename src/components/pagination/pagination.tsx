@@ -15,6 +15,8 @@ function Pagination(
   }: PaginationProps
 ) {
 
+  const maxShownPages = 4;
+
   if (curPage > totalPages) {
     setCurPage(1);
   }
@@ -30,17 +32,24 @@ function Pagination(
           <ChevronLeft />
         </button>
       </li>
-
-      {Array.from({ length: totalPages }).map((_, index) => (
-          <li key={index} className="pagination_container__list-item">
-            <button
-              className={`pagination_container__list-item__button ${curPage === index + 1 ? 'active' : ''}`}
-              onClick={() => setCurPage(index + 1)}
-            >
-              {index + 1}
-            </button>
-          </li>
-      ))}
+      {Array.from({ length: totalPages }).map((_, index) => {
+          const page = index + 1;
+          const isFirstOrLastPage = page === 1 || page === totalPages; // Se fpr a primeira ou ultima pagina
+          const isInRange = page > curPage - maxShownPages && page < curPage + maxShownPages; // ou se for entre o numero de paginas
+          if(isFirstOrLastPage || isInRange) {
+            return (
+              <li key={page} className="pagination_container__list-item">
+                <button
+                  className={`pagination_container__list-item__button ${curPage === page ? 'active' : ''}`}
+                  onClick={() => setCurPage(page)}
+                  >
+                  {page}
+                </button>
+              </li>
+            )
+          }
+          return null;
+      })}
       <li className="results_container_pagination__list-item">
         <button className="pagination_container__list-item__button"
           disabled={curPage === totalPages}
