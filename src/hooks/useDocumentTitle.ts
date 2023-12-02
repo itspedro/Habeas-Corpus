@@ -1,30 +1,14 @@
-import { useRef, useEffect } from 'react'
-
-
-/**
- * Esse hook é responsável por alterar o título da página
- * usando o hook "useEffect" padrão do React.
- * 
- */
-
+import { useEffect } from 'react'
 interface Props {
   title: string
-  persistOnUnmount?: boolean
 }
 
-function useDocumentTitle(props: Props) {
-
-  const prevTitleRef = useRef(document.title);
+function useDocumentTitle({title}: Props) {
 
   useEffect(() => {
-    document.title = props.title
-  }, [props.title])
+    document.title = title
+  }, [title])
 
-  useEffect(() => {
-    if (!props.persistOnUnmount) {
-      document.title = prevTitleRef.current;
-    }
-  }, [props.persistOnUnmount]);
 
 }
 
