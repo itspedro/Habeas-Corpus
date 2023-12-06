@@ -1,13 +1,14 @@
 .results_container {
   position: relative;
-  width: 70%;
-  min-height: 70vh;
+  width: 80%;
+  min-height: 60%;
   border-radius: var(--border-radius);
 
   height: fit-content;
   padding: 20px;
   overflow: auto;
   margin: 20px auto;
+  height: fit-content;
 
   background-color: var(--secondary-color);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);

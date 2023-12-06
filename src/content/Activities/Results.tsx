@@ -1,8 +1,6 @@
 import ResultsTable from '@/components/results-table/results-table';
 import { getAllActivities } from '@/utils/misc';
 
-
-
 function Results() {
 
   return (

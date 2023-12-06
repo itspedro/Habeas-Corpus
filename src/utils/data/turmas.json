@@ -1,0 +1,601 @@
+[{
+  "codTurma": "5484968038",
+  "horario": "1:10 AM",
+  "aulasSemana": 7,
+  "capacidade": 10,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "7183871878",
+  "horario": "9:27 PM",
+  "aulasSemana": 6,
+  "capacidade": 8,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "1794399437",
+  "horario": "4:40 AM",
+  "aulasSemana": 16,
+  "capacidade": 7,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "4644779989",
+  "horario": "4:27 PM",
+  "aulasSemana": 18,
+  "capacidade": 8,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "2533970905",
+  "horario": "4:08 PM",
+  "aulasSemana": 8,
+  "capacidade": 5,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "2674671939",
+  "horario": "10:32 PM",
+  "aulasSemana": 17,
+  "capacidade": 8,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "7596714595",
+  "horario": "1:25 AM",
+  "aulasSemana": 14,
+  "capacidade": 8,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "3181595098",
+  "horario": "10:12 AM",
+  "aulasSemana": 10,
+  "capacidade": 9,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "3537308213",
+  "horario": "4:03 AM",
+  "aulasSemana": 13,
+  "capacidade": 7,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "2587614279",
+  "horario": "11:21 AM",
+  "aulasSemana": 2,
+  "capacidade": 5,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "9248270808",
+  "horario": "1:10 PM",
+  "aulasSemana": 18,
+  "capacidade": 5,
+  "qtdeAlunos": 9
+}, {
+  "codTurma": "4113374465",
+  "horario": "7:39 AM",
+  "aulasSemana": 7,
+  "capacidade": 10,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "8485734440",
+  "horario": "11:44 AM",
+  "aulasSemana": 7,
+  "capacidade": 5,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "7984840660",
+  "horario": "12:08 PM",
+  "aulasSemana": 2,
+  "capacidade": 10,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "7279452108",
+  "horario": "5:52 AM",
+  "aulasSemana": 5,
+  "capacidade": 5,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "4836338360",
+  "horario": "3:56 PM",
+  "aulasSemana": 6,
+  "capacidade": 7,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "7772277962",
+  "horario": "11:17 AM",
+  "aulasSemana": 7,
+  "capacidade": 5,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "2673703144",
+  "horario": "6:42 PM",
+  "aulasSemana": 2,
+  "capacidade": 10,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "9937628482",
+  "horario": "4:49 AM",
+  "aulasSemana": 10,
+  "capacidade": 10,
+  "qtdeAlunos": 9
+}, {
+  "codTurma": "2278260839",
+  "horario": "9:56 AM",
+  "aulasSemana": 11,
+  "capacidade": 10,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "4024409999",
+  "horario": "5:09 PM",
+  "aulasSemana": 20,
+  "capacidade": 7,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "6586782414",
+  "horario": "1:36 PM",
+  "aulasSemana": 3,
+  "capacidade": 6,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "4168317102",
+  "horario": "5:14 PM",
+  "aulasSemana": 17,
+  "capacidade": 5,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "5732291660",
+  "horario": "11:00 AM",
+  "aulasSemana": 1,
+  "capacidade": 10,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "0616553153",
+  "horario": "10:26 PM",
+  "aulasSemana": 1,
+  "capacidade": 7,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "3996309090",
+  "horario": "9:13 PM",
+  "aulasSemana": 10,
+  "capacidade": 7,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "6203672793",
+  "horario": "11:40 PM",
+  "aulasSemana": 19,
+  "capacidade": 10,
+  "qtdeAlunos": 9
+}, {
+  "codTurma": "7864927688",
+  "horario": "6:07 AM",
+  "aulasSemana": 3,
+  "capacidade": 9,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "1661039227",
+  "horario": "2:07 PM",
+  "aulasSemana": 1,
+  "capacidade": 9,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "0693365323",
+  "horario": "6:52 PM",
+  "aulasSemana": 8,
+  "capacidade": 8,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "3777836907",
+  "horario": "6:42 AM",
+  "aulasSemana": 19,
+  "capacidade": 8,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "9066990821",
+  "horario": "9:41 PM",
+  "aulasSemana": 19,
+  "capacidade": 10,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "3172604136",
+  "horario": "8:00 AM",
+  "aulasSemana": 9,
+  "capacidade": 9,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "6522604981",
+  "horario": "4:47 AM",
+  "aulasSemana": 13,
+  "capacidade": 7,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "8530948939",
+  "horario": "7:52 AM",
+  "aulasSemana": 16,
+  "capacidade": 8,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "6742391650",
+  "horario": "8:41 AM",
+  "aulasSemana": 19,
+  "capacidade": 7,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "3688935020",
+  "horario": "3:29 AM",
+  "aulasSemana": 4,
+  "capacidade": 7,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "3039157922",
+  "horario": "9:42 AM",
+  "aulasSemana": 17,
+  "capacidade": 10,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "3472037113",
+  "horario": "4:13 AM",
+  "aulasSemana": 7,
+  "capacidade": 6,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "3645283056",
+  "horario": "1:40 PM",
+  "aulasSemana": 19,
+  "capacidade": 5,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "3213588423",
+  "horario": "5:13 AM",
+  "aulasSemana": 7,
+  "capacidade": 6,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "2903786380",
+  "horario": "9:01 PM",
+  "aulasSemana": 19,
+  "capacidade": 9,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "7560345913",
+  "horario": "9:32 AM",
+  "aulasSemana": 9,
+  "capacidade": 5,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "7599747354",
+  "horario": "6:52 PM",
+  "aulasSemana": 17,
+  "capacidade": 5,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "0209442492",
+  "horario": "4:40 AM",
+  "aulasSemana": 10,
+  "capacidade": 10,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "9349700239",
+  "horario": "2:56 PM",
+  "aulasSemana": 10,
+  "capacidade": 10,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "7192886890",
+  "horario": "12:37 AM",
+  "aulasSemana": 5,
+  "capacidade": 6,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "9719022671",
+  "horario": "7:56 PM",
+  "aulasSemana": 5,
+  "capacidade": 10,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "4895915948",
+  "horario": "12:31 AM",
+  "aulasSemana": 20,
+  "capacidade": 9,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "4130429906",
+  "horario": "9:49 PM",
+  "aulasSemana": 1,
+  "capacidade": 9,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "8119394348",
+  "horario": "9:22 AM",
+  "aulasSemana": 5,
+  "capacidade": 5,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "3969168902",
+  "horario": "6:02 AM",
+  "aulasSemana": 13,
+  "capacidade": 5,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "3291818830",
+  "horario": "3:00 PM",
+  "aulasSemana": 16,
+  "capacidade": 8,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "0772251495",
+  "horario": "7:42 AM",
+  "aulasSemana": 10,
+  "capacidade": 10,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "0134032012",
+  "horario": "5:58 PM",
+  "aulasSemana": 13,
+  "capacidade": 8,
+  "qtdeAlunos": 9
+}, {
+  "codTurma": "8031038090",
+  "horario": "8:24 AM",
+  "aulasSemana": 16,
+  "capacidade": 10,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "6695874530",
+  "horario": "2:16 AM",
+  "aulasSemana": 9,
+  "capacidade": 7,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "6517344284",
+  "horario": "6:28 PM",
+  "aulasSemana": 5,
+  "capacidade": 7,
+  "qtdeAlunos": 9
+}, {
+  "codTurma": "9931484594",
+  "horario": "4:09 AM",
+  "aulasSemana": 20,
+  "capacidade": 9,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "5366669626",
+  "horario": "1:25 AM",
+  "aulasSemana": 14,
+  "capacidade": 9,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "8465152489",
+  "horario": "10:43 PM",
+  "aulasSemana": 5,
+  "capacidade": 9,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "2924774861",
+  "horario": "4:09 AM",
+  "aulasSemana": 16,
+  "capacidade": 10,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "6444693586",
+  "horario": "10:54 PM",
+  "aulasSemana": 1,
+  "capacidade": 8,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "5338323540",
+  "horario": "2:35 AM",
+  "aulasSemana": 17,
+  "capacidade": 8,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "2992526452",
+  "horario": "3:08 AM",
+  "aulasSemana": 9,
+  "capacidade": 5,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "4346520758",
+  "horario": "4:49 AM",
+  "aulasSemana": 3,
+  "capacidade": 10,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "5964209661",
+  "horario": "6:13 AM",
+  "aulasSemana": 15,
+  "capacidade": 6,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "2324032597",
+  "horario": "10:25 AM",
+  "aulasSemana": 12,
+  "capacidade": 6,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "3109167050",
+  "horario": "2:50 AM",
+  "aulasSemana": 5,
+  "capacidade": 7,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "1456184598",
+  "horario": "9:27 AM",
+  "aulasSemana": 12,
+  "capacidade": 9,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "7235497106",
+  "horario": "9:19 AM",
+  "aulasSemana": 17,
+  "capacidade": 7,
+  "qtdeAlunos": 9
+}, {
+  "codTurma": "7831431543",
+  "horario": "1:13 AM",
+  "aulasSemana": 1,
+  "capacidade": 6,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "2502783046",
+  "horario": "9:39 PM",
+  "aulasSemana": 7,
+  "capacidade": 7,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "9188568407",
+  "horario": "4:59 PM",
+  "aulasSemana": 14,
+  "capacidade": 5,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "3702229744",
+  "horario": "12:30 AM",
+  "aulasSemana": 18,
+  "capacidade": 10,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "1556249527",
+  "horario": "11:12 AM",
+  "aulasSemana": 8,
+  "capacidade": 8,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "7338067090",
+  "horario": "4:41 PM",
+  "aulasSemana": 9,
+  "capacidade": 8,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "7194572427",
+  "horario": "3:11 AM",
+  "aulasSemana": 12,
+  "capacidade": 6,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "1439175020",
+  "horario": "11:23 AM",
+  "aulasSemana": 9,
+  "capacidade": 7,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "7328264926",
+  "horario": "3:31 AM",
+  "aulasSemana": 1,
+  "capacidade": 8,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "4371320678",
+  "horario": "12:32 AM",
+  "aulasSemana": 7,
+  "capacidade": 9,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "2866841921",
+  "horario": "12:33 AM",
+  "aulasSemana": 1,
+  "capacidade": 10,
+  "qtdeAlunos": 3
+}, {
+  "codTurma": "2360570455",
+  "horario": "4:59 PM",
+  "aulasSemana": 11,
+  "capacidade": 9,
+  "qtdeAlunos": 5
+}, {
+  "codTurma": "6278740613",
+  "horario": "11:51 AM",
+  "aulasSemana": 19,
+  "capacidade": 8,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "5778480229",
+  "horario": "10:06 AM",
+  "aulasSemana": 5,
+  "capacidade": 10,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "2170347313",
+  "horario": "9:29 AM",
+  "aulasSemana": 9,
+  "capacidade": 8,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "5241036113",
+  "horario": "11:16 AM",
+  "aulasSemana": 20,
+  "capacidade": 5,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "0651950376",
+  "horario": "1:11 PM",
+  "aulasSemana": 19,
+  "capacidade": 8,
+  "qtdeAlunos": 10
+}, {
+  "codTurma": "1837519889",
+  "horario": "2:52 AM",
+  "aulasSemana": 1,
+  "capacidade": 10,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "1371914257",
+  "horario": "2:34 PM",
+  "aulasSemana": 18,
+  "capacidade": 7,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "7375419892",
+  "horario": "10:58 PM",
+  "aulasSemana": 8,
+  "capacidade": 7,
+  "qtdeAlunos": 9
+}, {
+  "codTurma": "3776751096",
+  "horario": "11:47 PM",
+  "aulasSemana": 11,
+  "capacidade": 7,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "7580815133",
+  "horario": "3:36 PM",
+  "aulasSemana": 20,
+  "capacidade": 6,
+  "qtdeAlunos": 4
+}, {
+  "codTurma": "3871379999",
+  "horario": "12:24 AM",
+  "aulasSemana": 2,
+  "capacidade": 10,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "8994701281",
+  "horario": "10:41 PM",
+  "aulasSemana": 1,
+  "capacidade": 6,
+  "qtdeAlunos": 7
+}, {
+  "codTurma": "8119341627",
+  "horario": "1:33 PM",
+  "aulasSemana": 18,
+  "capacidade": 6,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "7876556167",
+  "horario": "4:23 PM",
+  "aulasSemana": 16,
+  "capacidade": 7,
+  "qtdeAlunos": 2
+}, {
+  "codTurma": "5763574206",
+  "horario": "10:04 PM",
+  "aulasSemana": 20,
+  "capacidade": 8,
+  "qtdeAlunos": 6
+}, {
+  "codTurma": "5044612677",
+  "horario": "10:10 AM",
+  "aulasSemana": 8,
+  "capacidade": 5,
+  "qtdeAlunos": 8
+}, {
+  "codTurma": "8507093620",
+  "horario": "5:47 PM",
+  "aulasSemana": 3,
+  "capacidade": 9,
+  "qtdeAlunos": 4
+}]

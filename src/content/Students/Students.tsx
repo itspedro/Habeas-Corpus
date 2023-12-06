@@ -1,24 +1,33 @@
-import TopBar from '@/components/top-bar/top-bar';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
 import Results from './Results';
+import { useState } from 'react';
+import AddStudent from './AddStudent';
 
 
 function Students() {
 
   useDocumentTitle({ title: 'HC - Alunos' });
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
-    <div>
-      <div className="container">
-        <div>
+    <>
+      <div>
+        <div className="container">
           <div>
-            <h1>Alunos</h1>
-            <TopBar />
-            <Results />
+            <div>
+              <h1>Alunos</h1>
+              <Results />
+              <button
+                onClick={() => setModalIsOpen(true)}
+              >
+                Adicionar Aluno
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      {modalIsOpen && <AddStudent setModalIsOpen={setModalIsOpen} />}
+    </>
   );
 }
 

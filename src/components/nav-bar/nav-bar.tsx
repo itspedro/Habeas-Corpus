@@ -3,7 +3,6 @@ import {
   GridIcon,
   UserIcon,
   UsersIcon,
-  UnidadeIcon,
   ActivityIcon,
   CapIcon
 } from "@/components/icons";
@@ -62,13 +61,6 @@ function NavBar() {
             label="Atividades"
             route="/atividades"
             icon={<ActivityIcon />}
-          />
-        </li>
-        <li>
-          <NavBarItem
-            label="Unidade"
-            route="/unidade"
-            icon={<UnidadeIcon />}
           />
         </li>
       </ul>

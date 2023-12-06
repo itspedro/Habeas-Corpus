@@ -1,4 +1,3 @@
-import TopBar from '@/components/top-bar/top-bar';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
 import Results from './Results';
 
@@ -13,7 +12,6 @@ function Teachers() {
         <div>
           <div>
             <h1>Instrutores</h1>
-            <TopBar />
             <Results />
           </div>
         </div>

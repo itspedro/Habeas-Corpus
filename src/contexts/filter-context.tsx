@@ -5,7 +5,7 @@ export const FilterContext = createContext({
   search: '',
   type: FilterType.ALL,
   setSearch: (value: string) => {},
-  setType: (value: FilterType) => {}
+  setType: (value: FilterType) => {},
 });
 
 interface ProviderProps {
@@ -23,7 +23,7 @@ export function FilterContextProvider({ children }: ProviderProps) {
         search,
         type,
         setSearch,
-        setType
+        setType,
       }}
     >
       {children}

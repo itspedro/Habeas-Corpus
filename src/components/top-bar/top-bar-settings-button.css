@@ -1,0 +1,19 @@
+.top-bar-settings-button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+}
+
+.top-bar-settings-button_container:hover {
+  background-color: var(--tertiary-color);
+}
+
+.top-bar-settings-button_container svg {
+  width: 20px;
+}
