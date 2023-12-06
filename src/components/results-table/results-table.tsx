@@ -31,7 +31,7 @@ function ResultsTable<T>({
   const keys = tableHeadings.map((item) => item.key);
   const filterKeys = keys.filter((item) => item.toLowerCase() === 'status');
   const statusIndex = filterKeys.findIndex((item) => item.toLowerCase() === 'status');
-  const nameKey = tableHeadings.filter((item) => item.label === 'Nome');
+  const nameKey = tableHeadings.filter((item) => item.label === 'Nome' || 'Código');
 
   const data: Array<T> = getArray();
   
