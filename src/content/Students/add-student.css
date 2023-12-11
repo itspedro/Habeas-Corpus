@@ -1,5 +1,8 @@
 .add-student {
-  position: absolute;
+  font-family: inherit;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -13,51 +16,36 @@
 }
 
 .add-student_container {
-  width: 47%;
+  width: 40%;
 	margin: 0 auto;
 	background-color: var(--secondary-color);
 	border-radius: var(--border-radius);
+  padding: 20px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
   flex-wrap: wrap;
 	box-shadow: 0 15px 30px 0 rgba(#000, 0.25);
-	@media (max-width: 600px) {
-		width: 90%;
-	}
 }
 
-.add-student_container__form {
+.add-student_container__header {
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
-.add-student_container__form__input-div {
+.add-student_close {
+  height: 50%;
+  font-family: inherit;
+  padding: 7px 9px;
+  background-color: #EF0107;
   display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: var(--border-radius);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-size: 1rem;
-  font-family: inherit;
-  &:focus {
-    outline: none;
-  }
-}	
-
-.add-student_container__form__input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 0 ;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  color: var(--secondary-color);
+  cursor: pointer;
 }

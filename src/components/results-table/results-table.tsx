@@ -3,7 +3,7 @@ import { useState } from "react";
 import Pagination from "@/components/pagination/pagination";
 import { FilterType } from "@/types/FilterType";
 import TableData from "../table-data/table-data";
-import ItemModal from "../aluno-modal/item-modal";
+import ItemModal from "../item-modal/item-modal";
 import { useFilter } from "@/hooks/useFilter";
 
 type HeadingsType = {
@@ -29,12 +29,11 @@ function ResultsTable<T>({
   };
 
   const keys = tableHeadings.map((item) => item.key);
-  const filterKeys = keys.filter((item) => item.toLowerCase() === 'status');
-  const statusIndex = filterKeys.findIndex((item) => item.toLowerCase() === 'status');
-  const nameKey = tableHeadings.filter((item) => item.label === 'Nome' || 'Código');
-
+  const nameKey = keys.filter((item) => item === 'nome' || item.startsWith('cod'));
   const data: Array<T> = getArray();
-  
+  const filterKeys = Object.keys(data[0] as string).filter((item) => !nameKey.includes(item));
+  const statusIndex = filterKeys.findIndex((item) => item.toLowerCase() === 'status');
+
   const { search, type } = useFilter();
   const filteredData: Array<T> = data.filter((item) => {
     switch (type) {
@@ -56,7 +55,11 @@ function ResultsTable<T>({
   const currentData = filteredData.slice(firstIndex, lastIndex);
   const totalPages = Math.ceil(filteredData.length / maxPerPage);
   const searchedData = filteredData.filter((item) =>
-    item[nameKey[0].key as keyof T]
+    item[nameKey[0] as keyof T]
+      ?.toString()
+      .toLowerCase()
+      .includes(search.toLowerCase()) ||
+    item[nameKey[1] as keyof T]
       ?.toString()
       .toLowerCase()
       .includes(search.toLowerCase())
@@ -109,7 +112,7 @@ function ResultsTable<T>({
           />
         )}
       </div>
-      {modal && <ItemModal data={selectedItem as object} />}
+      {modal && <ItemModal data={selectedItem as object} setModal={setModal} />}
     </>
   );
 }

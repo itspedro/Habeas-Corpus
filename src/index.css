@@ -1,10 +1,19 @@
 :root {
   --bg-color: #e4ebf0;
   --primary-color: #4180ab;
-  --primary-color-hover: #009FBF;
   --secondary-color: #ffffff;
   --tertiary-color: #8ab3cf;
   --accent-color: #bdd1de;
   --text-color: #031024;
   --border-radius: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+       -webkit-appearance: none;
+        margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }

@@ -1,6 +1,6 @@
 .results_container {
   position: relative;
-  width: 80%;
+  width: 90%;
   min-height: 60%;
   border-radius: var(--border-radius);
 
@@ -15,17 +15,12 @@
 }
 
 .results_container__table, th, td {
-  padding: 15px;
+  padding: 20px;
   text-align: start;
 }
 
 tbody tr {
-  border-bottom: 1px solid var(--accent-color);
-  background-color: var(--bg-color);
-}
-
-tbody tr:nth-child(even){
-  background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--text-color);
 }
 
 tbody tr:hover {
@@ -36,14 +31,13 @@ tbody tr:hover {
 .results_container__table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: var(--border-radius);
   overflow: hidden;
   margin-bottom: 20px;
 }
 
 .results_container__table__header {
-  background-color: var(--tertiary-color);
-  color: var(--text-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .results_container__header {

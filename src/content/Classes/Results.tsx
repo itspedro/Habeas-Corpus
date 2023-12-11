@@ -22,10 +22,6 @@ function Results() {
         {
           label: 'Capacidade',
           key: 'capacidade'
-        },  
-        {
-          label: 'Alunos',
-          key: 'qtdeAlunos'
         }
       ]}
     />

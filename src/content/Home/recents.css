@@ -1,0 +1,13 @@
+.recents_container_header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  font-family: inherit;
+}
+
+.recents_container_header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-color);
+}

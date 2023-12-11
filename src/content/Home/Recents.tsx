@@ -1,3 +1,4 @@
+import "./recents.css";
 import ResultsTable from '@/components/results-table/results-table';
 import { getLatestStudents } from '@/utils/misc';
 
@@ -5,11 +6,17 @@ import { getLatestStudents } from '@/utils/misc';
 function RecentUsers() {
   return (
     <div>
-      <h2>Alunos Recentes</h2>
+      <div className="recents_container_header">
+        <h2>Alunos Recentes</h2>
+      </div>
       <div>
         <ResultsTable
           getArray={getLatestStudents}
           tableHeadings={[
+            {
+              label: 'Matricula',
+              key: 'cod_matricula'
+            },
             {
               label: 'Nome',
               key: 'nome'
@@ -23,9 +30,9 @@ function RecentUsers() {
               key: 'sexo'
             },
             {
-              label: 'Matricula',
-              key: 'cod_matricula'
-            }
+              label: 'Status',
+              key: 'status'
+            },
           ]}
         />
       </div>

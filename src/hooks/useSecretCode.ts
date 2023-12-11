@@ -27,6 +27,7 @@ export function useSecretCode(secretCode: string[]): boolean {
     setSuccess(true);
     setCurrent(0);
     
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key])
 
   return success;

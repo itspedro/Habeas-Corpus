@@ -1,4 +1,4 @@
-.top-bar-settings-button_container {
+.top-bar-unit-button_container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,10 +10,10 @@
   border-radius: var(--border-radius);
 }
 
-.top-bar-settings-button_container:hover {
+.top-bar-unit-button_container:hover {
   background-color: var(--tertiary-color);
 }
 
-.top-bar-settings-button_container svg {
+.top-bar-unit-button_container svg {
   width: 20px;
 }

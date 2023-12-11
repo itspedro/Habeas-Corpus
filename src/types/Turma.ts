@@ -3,5 +3,5 @@ export type Turma =  {
   horario: string,
   aulasSemana: number,
   capacidade: number,
-  qtdeAlunos: number,
+  alunos: any[],
 }

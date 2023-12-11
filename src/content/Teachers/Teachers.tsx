@@ -1,22 +1,25 @@
-import useDocumentTitle from '@/hooks/useDocumentTitle';
-import Results from './Results';
-
+import useDocumentTitle from "@/hooks/useDocumentTitle";
+import Results from "./Results";
+import { useState } from "react";
+import AddTeacher from "./AddTeacher";
+import PageHeader from "@/components/page-header/page-header";
 
 function Teachers() {
-
-  useDocumentTitle({ title: 'HC - Instrutores' });
+  useDocumentTitle({ title: "HC - Instrutores" });
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
-    <div>
-      <div className="container">
-        <div>
+    <>
+      <div>
+        <div className="instrutores-container">
           <div>
-            <h1>Instrutores</h1>
+            <PageHeader setModalIsOpen={setModalIsOpen} title="Instrutores" label="Cadastrar Instrutor" />
             <Results />
           </div>
         </div>
       </div>
-    </div>
+      {modalIsOpen && <AddTeacher setModalIsOpen={setModalIsOpen} />}
+    </>
   );
 }
 

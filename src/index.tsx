@@ -9,6 +9,7 @@ import Students from '@/content/Students/Students';
 import Teachers from './content/Teachers/Teachers';
 import Activities from './content/Activities/Activities';
 import Classes from './content/Classes/Classes';
+import Unit from './content/Unit/Unit';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/unidade',
-        element: <div>Unidade</div>
+        element: <Unit />
       },
     ]
   },
@@ -47,9 +48,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <FilterContextProvider>
-      <RouterProvider router={router} />
-    </FilterContextProvider>
-  </React.StrictMode>
+  <FilterContextProvider>
+    <RouterProvider router={router} />
+  </FilterContextProvider>
 );

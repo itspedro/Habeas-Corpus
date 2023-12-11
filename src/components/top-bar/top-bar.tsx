@@ -1,7 +1,7 @@
-import './top-bar-styles.css';
+import './top-bar.css';
 import TopBarInputIcon from './top-bar-input';
 import { useFilter } from '@/hooks/useFilter';
-import TopBarAddButton from './top-bar-settings-button';
+import TopBarUnitButton from './top-bar-unit-button';
 import TopBarFilterButton from './top-bar-filter-button';
 
 function TopBar() {
@@ -17,7 +17,7 @@ function TopBar() {
       />
       <div className="top-bar_container__controls">
         <TopBarFilterButton />
-        <TopBarAddButton />
+        <TopBarUnitButton />
       </div>
     </div>
   )
