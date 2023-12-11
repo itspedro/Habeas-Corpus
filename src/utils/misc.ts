@@ -1,9 +1,9 @@
+import { Professor } from './../types/Professor';
 import { Aluno } from '@/types/Aluno';
-import { Professor } from '@/types/Professor';
-import { dataAlunos } from './data/alunos';
-import { dataProfessores } from './data/professores';
-import { dataAtividades } from './data/atividades';
-import { dataTurmas } from './data/turmas';
+import AlunoService from './data/alunos';
+import ProfessorService from './data/professores';
+import AtividadeService from './data/atividades';
+import TurmaService from './data/turmas';
 import UnidadeService from './data/unidade';
 import { Atividade } from '@/types/Atividade';
 import { Turma } from '@/types/Turma';
@@ -12,7 +12,7 @@ import { Unidade } from '@/types/Unidade';
 
 
 export function getLatestStudents(): Aluno[] {
-  return dataAlunos.slice(dataAlunos.length - 10, dataAlunos.length).reverse();
+  return AlunoService.getAluno().slice(getTotalStudents() - 10, getTotalStudents()).reverse();
 }
 
 export function cadastrarAluno(data: object): void {
@@ -35,28 +35,31 @@ export function desligarAluno(cod: string, motivo?: string): void {
 }
 
 export function getStudentById(id: string): Aluno | undefined {
-  return dataAlunos.find(aluno => aluno.cod_matricula === id);
+  return AlunoService.getAlunoByMatricula(id);
 }
 
+export function getStudentByCPF(cpf: string): Aluno | undefined {
+  return AlunoService.getAlunoByCPF(cpf);
+}
 
 export function addStudent(aluno: Aluno): void {
-  dataAlunos.push(aluno);
+  AlunoService.setAluno(aluno);
 }
 
 export function getAllStudents(): Aluno[] {
-  return dataAlunos;
+  return AlunoService.getAluno();
 }
 
 export function getTotalStudents(): number {
-  return dataAlunos.length;
+  return AlunoService.getAluno().length;
 }
 
 export function getAllTeachers(): Professor[] {
-  return dataProfessores;
+  return ProfessorService.getProfessor();
 }
 
 export function getTotalTeachers(): number {
-  return dataProfessores.length;
+  return ProfessorService.getProfessor().length;
 }
 
 export function desligarProfessor(cref: string): void {
@@ -68,11 +71,7 @@ export function desligarProfessor(cref: string): void {
 }
 
 export function getTeacherByCref(cref: string): Professor | undefined {
-  return dataProfessores.find(professor => professor.cref === cref);
-}
-
-export function addTeacher(professor: Professor): void {
-  dataProfessores.push(professor);
+  return ProfessorService.getProfessorByCref(cref);
 }
 
 export function cadastrarProfessor(data: object): void {
@@ -82,17 +81,16 @@ export function cadastrarProfessor(data: object): void {
   } as Professor);
 }
 
+export function addTeacher(professor: Professor): void {
+  ProfessorService.setProfessor(professor);
+}
 
 export function getAllActivities(): Atividade[] {
-  return dataAtividades;
+  return AtividadeService.getAtividade();
 }
 
 export function getTotalActivities(): number {
-  return dataAtividades.length;
-}
-
-export function addActivity(atividade: Atividade): void {
-  dataAtividades.push(atividade);
+  return AtividadeService.getAtividade().length;
 }
 
 export function cadastrarAtividade(data: object): void {
@@ -101,12 +99,16 @@ export function cadastrarAtividade(data: object): void {
   } as Atividade);
 }
 
+export function addActivity(atividade: Atividade): void {
+  AtividadeService.setAtividade(atividade);
+}
+
 export function getAllClasses(): Turma[] {
-  return dataTurmas;
+  return TurmaService.getTurma();
 }
 
 export function getTotalClasses(): number {
-  return dataTurmas.length;
+  return TurmaService.getTurma().length;
 }
 
 export function cadastrarTurma(data: object): void {
@@ -116,7 +118,7 @@ export function cadastrarTurma(data: object): void {
 }
 
 export function addClass(turma: Turma): void {
-  dataTurmas.push(turma);
+  TurmaService.setTurma(turma);
 }
 
 export function getUnit(): Unidade {

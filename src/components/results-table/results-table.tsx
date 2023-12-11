@@ -31,7 +31,7 @@ function ResultsTable<T>({
   const keys = tableHeadings.map((item) => item.key);
   const nameKey = keys.filter((item) => item === 'nome' || item.startsWith('cod'));
   const data: Array<T> = getArray();
-  const filterKeys = Object.keys(data[0] as string).filter((item) => !nameKey.includes(item));
+  const filterKeys = data.length > 0 ? (Object.keys(data[0] as string).filter((item) => !nameKey.includes(item))) : [];
   const statusIndex = filterKeys.findIndex((item) => item.toLowerCase() === 'status');
 
   const { search, type } = useFilter();
@@ -67,6 +67,7 @@ function ResultsTable<T>({
 
   return (
     <>
+    {data.length > 0 ? (
       <div className="results_container">
         <div className="results_container__header">
           <span className="results_container__span">{type}</span>
@@ -112,7 +113,34 @@ function ResultsTable<T>({
           />
         )}
       </div>
-      {modal && <ItemModal data={selectedItem as object} setModal={setModal} />}
+      
+    ) : (
+      <div className="results_container">
+        <div className="results_container__header">
+          <span className="results_container__span">{type}</span>
+          <h3 className="results_container__h3">
+            Resultados {search.toLowerCase() !== "" && searchedData.length}
+          </h3>
+        </div>
+        <table className="results_container__table">
+          <thead className="results_container__table__header">
+            <tr>
+              {tableHeadings.map((heading, index) => (
+                <th key={index}>{heading.label}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colSpan={tableHeadings.length} className="results_container__table__td">
+                Nenhum resultado encontrado.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    )}
+    {modal && <ItemModal data={selectedItem as object} setModal={setModal} />}
     </>
   );
 }
