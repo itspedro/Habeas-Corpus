@@ -7,8 +7,10 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Turma } from '@/types/Turma';
 import Select from 'react-select';
-import { getAllStudents } from "@/utils/misc";
+import { getAllActivities, getAllStudents, getAllTeachers } from "@/utils/misc";
 import { Aluno } from "@/types/Aluno";
+import { Atividade } from "@/types/Atividade";
+import { Professor } from "@/types/Professor";
 
 let totalCapacidade = 0;
 
@@ -44,8 +46,27 @@ const createTurmaSchema = z.object({
       return alunos.map(aluno => (
         {cpf: aluno.value}
       ));
-    })
-  
+    }),
+  atividades: z.array(z.object({
+    value:z.string(),
+    label:z.string()
+  }))
+    .min(1, 'É necessário pelo menos 1 atividade.')
+    .transform(atividades => {
+      return atividades.map(atividade => (
+        {codAtividade: atividade.value}
+      ));
+    }),
+  instrutor: z.object({
+    value:z.string(),
+    label:z.string()
+  })
+    .refine(instrutor => {
+      return instrutor.value !== "";
+    }, 'O Instrutor é obrigatório.')
+    .transform(instrutor => {
+      return {cpf: instrutor.value};
+    }),
 });
 
 interface FormProps {
@@ -64,13 +85,28 @@ function TurmaForm({ onSubmit }: FormProps) {
   });
 
   const allAlunos: Aluno[] = getAllStudents();
-  const options = allAlunos.filter(u => u.status === true).map(aluno => {
+  const optionsAlunos = allAlunos.filter(u => u.status === true).map(aluno => {
     return {
       value: aluno.cpf,
       label: aluno.nome
     }
   });
 
+  const allAtividades: Atividade[] = getAllActivities();
+  const optionsAtividades = allAtividades.map(atividade => {
+    return {
+      value: atividade.codAtividade,
+      label: atividade.nomeAtividade
+    }
+  });
+
+  const allInstrutores: Professor[] = getAllTeachers();
+  const optionsInstrutores = allInstrutores.map(professor => {
+    return {
+      value: professor.cpf,
+      label: professor.nome
+    }
+  });
 
   return (
     <form
@@ -99,7 +135,7 @@ function TurmaForm({ onSubmit }: FormProps) {
         register={register}
         error={errors.capacidade}
       />
-      <div className="turma-alunos-input_container">
+      <div>
         <label htmlFor="alunos">Alunos</label>
         <Controller
           name="alunos"
@@ -108,16 +144,51 @@ function TurmaForm({ onSubmit }: FormProps) {
             <Select
               {... field}
               isMulti
-              options={options}
+              options={optionsAlunos}
               closeMenuOnSelect={false}
-              className="turma-alunos-input_container__input"
-
             />
           )}
         />
         {errors.alunos && (
-          <span className="turma-alunos-input_container__input-error">
+          <span className="form-input_container__input-error">
             {errors.alunos.message}
+          </span>
+        )}
+      </div>
+      <div>
+        <label htmlFor="atividades">Atividades</label>
+        <Controller
+          name="atividades"
+          control={control}
+          render={({ field }) => (
+            <Select
+              {... field}
+              isMulti
+              options={optionsAtividades}
+            />
+          )}
+        />
+        {errors.atividades && (
+          <span className="form-input_container__input-error">
+            {errors.atividades.message}
+          </span>
+        )}
+      </div>
+      <div>
+        <label htmlFor="instrutor">Instrutor</label>
+        <Controller
+          name="instrutor"
+          control={control}
+          render={({ field }) => (
+            <Select
+              {... field}
+              options={optionsInstrutores}
+            />
+          )}
+        />
+        {errors.instrutor && (
+          <span className="form-input_container__input-error">
+            {errors.instrutor.message as React.ReactNode}
           </span>
         )}
       </div>

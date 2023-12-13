@@ -13,16 +13,18 @@ const createAtividadeSchema = z.object({
 });
 interface FormProps {
   onSubmit: SubmitHandler<Atividade>;
+  currentValues?: Atividade;
 }
 
-function AtividadeForm({ onSubmit }: FormProps) {
+function AtividadeForm({ onSubmit, currentValues }: FormProps) {
 
   const { 
     handleSubmit,
     register,
     formState: { errors } 
   } = useForm<Atividade>({
-    resolver: zodResolver(createAtividadeSchema)
+    resolver: zodResolver(createAtividadeSchema),
+    defaultValues: currentValues
   });
 
 
@@ -52,7 +54,7 @@ function AtividadeForm({ onSubmit }: FormProps) {
       <input
         className="form_container-submit"
         type="submit"
-        value="Cadastrar"
+        value={currentValues ? "Editar" : "Cadastrar"}
       />
     </form>
   );

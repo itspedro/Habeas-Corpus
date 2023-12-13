@@ -62,16 +62,18 @@ const createProfessorSchema = z.object({
 
 interface FormProps {
   onSubmit: SubmitHandler<Professor>;
+  currentValues?: Professor;
 }
 
-function ProfessorForm({ onSubmit }: FormProps) {
+function ProfessorForm({ onSubmit , currentValues }: FormProps) {
 
   const { 
     handleSubmit,
     register,
     formState: { errors } 
   } = useForm<Professor>({
-    resolver: zodResolver(createProfessorSchema)
+    resolver: zodResolver(createProfessorSchema),
+    defaultValues: currentValues
   });
 
 
@@ -169,7 +171,7 @@ function ProfessorForm({ onSubmit }: FormProps) {
       <input
         className="form_container-submit"
         type="submit"
-        value="Cadastrar"
+        value={currentValues ? "Editar" : "Cadastrar"}
       />
     </form>
   );

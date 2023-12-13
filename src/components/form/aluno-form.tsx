@@ -55,16 +55,18 @@ const createAlunoSchema = z.object({
 
 interface FormProps {
   onSubmit: SubmitHandler<Aluno>;
+  currentValues?: Aluno;
 }
 
-function AlunoForm({ onSubmit }: FormProps) {
+function AlunoForm({ onSubmit, currentValues }: FormProps) {
 
   const { 
     handleSubmit,
     register,
     formState: { errors } 
   } = useForm<Aluno>({
-    resolver: zodResolver(createAlunoSchema)
+    resolver: zodResolver(createAlunoSchema),
+    defaultValues: currentValues
   });
 
 
@@ -85,6 +87,7 @@ function AlunoForm({ onSubmit }: FormProps) {
         name="cpf"
         mask="999.999.999-99"
         type="text"
+        value={currentValues?.cpf} 
         register={register}
         error={errors.cpf}
       />
@@ -107,6 +110,7 @@ function AlunoForm({ onSubmit }: FormProps) {
         name="cep"
         mask="99999-999"
         type="text"
+        value={currentValues?.cep}
         register={register}
         error={errors.cep}
       />
@@ -115,6 +119,7 @@ function AlunoForm({ onSubmit }: FormProps) {
         name="telefone"
         mask="(99) 99999-9999"
         type="text"
+        value={currentValues?.telefone}
         register={register}
         error={errors.telefone}
       />
@@ -130,6 +135,7 @@ function AlunoForm({ onSubmit }: FormProps) {
         name="data_nascimento"
         mask="99/99/9999"
         type="text"
+        value={currentValues?.data_nascimento}
         register={register}
         error={errors.data_nascimento}
       />
@@ -156,7 +162,7 @@ function AlunoForm({ onSubmit }: FormProps) {
       <input
         className="form_container-submit"
         type="submit"
-        value="Cadastrar"
+        value={currentValues ? "Editar" : "Cadastrar"}
       />
     </form>
   );

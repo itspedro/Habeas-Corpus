@@ -1,6 +1,10 @@
+import { Aluno } from "@/types/Aluno";
 import { EditIcon } from "../icons";
 import "./table-data.css";
 import React from "react";
+import EditAluno from "./edit-aluno";
+import EditProfessor from "./edit-professor";
+import { Professor } from "@/types/Professor";
 
 interface TableDataProps<T> {
   data: T;
@@ -15,6 +19,10 @@ function TableData<T>({
   status,
   openModal,
 }: TableDataProps<T>) {
+
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+  let isAluno = (data as Aluno).cod_matricula !== undefined;
+
   return (
     <tr className="table-data_container" onClick={() => openModal(data)}>
       {tableHeadings
@@ -33,11 +41,13 @@ function TableData<T>({
             className="edit-button"
             onClick={(e) => {
               e.stopPropagation();
-              console.log(data);
+              setModalIsOpen(true);
             }}
           >
             <EditIcon />
           </button>
+          {modalIsOpen && isAluno && <EditAluno setModalIsOpen={setModalIsOpen} currentValues={data as Aluno} />}
+          {modalIsOpen && !isAluno && <EditProfessor setModalIsOpen={setModalIsOpen} currentValues={data as Professor} />}
         </>
       )}
     </tr>
